@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="carousel.min.js"></script>
+    <script src="example.js" defer></script>
     <link rel="stylesheet" type="text/css" href="carousel.min.css" />
     <link rel="stylesheet" type="text/css" href="main.css" />
     <title>Carousel</title>
@@ -26,14 +27,13 @@
             2
           </div>
         </div>
-        
 
         <div class="carousel-item">
           <div class="example-item">
             3
           </div>
         </div>
-        
+
         <div class="carousel-item">
           <div class="example-item">
             4
@@ -43,16 +43,46 @@
           <div class="example-item">
             5
           </div>
-        </div>  
+        </div>
         <div class="carousel-item">
-            <div class="example-item">
-              6
-            </div>
+          <div class="example-item">
+            6
           </div>
+        </div>
 
         <div class="carousel-button-next example-button">👉</div>
         <div class="carousel-button-prev example-button">👈</div>
       </div>
+    </div>
+
+    <div class="setting-panel">
+     
+        <pre style="width: max-content;">
+  {
+    id: <input value="example" disabled>,
+    rotation: {
+      amount: <input value="5" id="rotationAmount">, // How many elements it moves per rotation
+      timingFunction: "<input value="ease-in-out" id="timingFunction">", // Timing function of the movement
+      duration: <input value="1000" id="rotationDuration">, // How long the movement takes
+    },
+    buttons: {
+      hide: "<input value="false" id="buttonHide", // Whether to hide the buttons
+      disableForSingle: <input value="false" id="disableForSingle">, // Disables the buttons when there is only one element in the carousel
+    },
+    display: {
+      number: <input value="5" disabled>, // Number of elements to display at a time,
+      duration: <input value="1000" id="displayDuration">, // If specified then the carousel will rotate every time that number of milliseconds has elapsed
+      startOffset: <input value="0" id="startOffset">, // Waits this long before auto rotating,
+      direction: <input value="left" id="displayDirection">, // The direction to move the carousel either left or right
+    },
+    class: {
+      itemClassName: <input value="carousel-item" disabled>, // Used if you have altered the class for an item
+    },
+  }
+</pre>
+      
+
+      <button id="update">Update settings</button>
     </div>
   </body>
 </html>
