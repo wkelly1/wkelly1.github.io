@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="carousel.min.js"></script>
+    <script src="carousel.min.js" type="application/javascript"></script>
     <script src="example.js" defer></script>
     <link rel="stylesheet" type="text/css" href="carousel.min.css" />
     <link rel="stylesheet" type="text/css" href="main.css" />
@@ -66,7 +66,7 @@
       duration: <input value="1000" id="rotationDuration">, // How long the movement takes
     },
     buttons: {
-      hide: "<input value="false" id="buttonHide">, // Whether to hide the buttons
+      hide: <input value="false" id="buttonHide">, // Whether to hide the buttons
       disableForSingle: <input value="false" id="disableForSingle">, // Disables the buttons when there is only one element in the carousel
     },
     display: {
@@ -78,6 +78,11 @@
     class: {
       itemClassName: <input value="carousel-item" disabled>, // Used if you have altered the class for an item
     },
+    fit: {
+      fitToParent: <input value="false" disabled>, // Resizes the children to be width based on the container size and the display number
+      fitToChildren: <input value="true" disabled>, // Resized the container to be the size of the children
+      responsive: <input value="true" disabled>, // If fit to parent is true then it resizes the children when the window resizes
+    }
   }
 </pre>
       
@@ -108,6 +113,11 @@
     class: {
       itemClassName: "carousel-item", // Used if you have altered the class for an item
     },
+    fit: {
+      fitToParent: false,
+      fitToChildren: true,
+      responsive: true,
+    }
   };
 
   let example = new Carousel(settings);
