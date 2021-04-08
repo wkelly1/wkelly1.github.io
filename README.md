@@ -1,4 +1,4 @@
 # Project static webpage examples
 
 ## Current projects
--   [Carousel](https://will-kelly.co.uk/Carousel/index.html)
+-   [Carousel](https://github.will-kelly.co.uk/Carousel/index.html)
